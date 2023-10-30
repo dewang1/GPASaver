@@ -256,7 +256,7 @@ main {
 
 /* Background image of sounds page */
 .sounds-bg {
-  background-image: url('img/background/lofi_anime.jpg');
+  background-image: url('../img/background/lofi_anime.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
