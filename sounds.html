@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPA Squared</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body class="sounds-bg">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-gradient">
+      <!-- lg = large breakpoint, navbar-light = make text dark -->
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img
+            src="img/gpa_saver.svg"
+            alt="GPA Saver Squared Logo"
+            class="d-inline-block w-75"
+          />
+        </a>
+
+        <!-- Hamburger Menu Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+        <div class="collapse navbar-collapse" id="navmenu">
+          <!-- Links to hamburger menu button -->
+          <ul class="navbar-nav ms-auto align-items-center">
+            <!-- ms-auto is margin spacing-->
+            <li class="nav-item">
+              <a href="tools.html" class="nav-link nbMenuItem">Tools</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nbMenuItem">Sounds</a>
+            </li>
+            <li class="nav-item">
+              <a href="login.html" class="nav-link nbMenuItem">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="signup.html" class="nav-btn nbMenuItem"> <!-- nav-btn = custom class for margin -->
+                <button class="btn btn-light rounded-pill py-1">Sign Up</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Audio visualization -->
+    <canvas id="visualizer"></canvas>
+
+    <!-- Image attribution -->
+    <a id="img-credit" class="image-credit" href="https://www.freepik.com/free-ai-image/cartoon-lofi-young-manga-style-girl-studying-while-listening-music-raining-street-ai-generative_43227423.htm#query=lofi%20anime&position=0&from_view=keyword&track=ais">Image by chandlervid85</a>
+    
+    <!-- Container for both the controls and tooltip -->
+    <div class="audio-player-container">
+      <audio src="" id="audioPlayer" preload="none"></audio>
+      <!-- Container of the audio controls -->
+      <div>
+        <button id="prevBtn" class="control-btn"><i class="bi bi-skip-backward"></i></button>
+        <button id="playPauseBtn" class="control-btn"><i class="bi bi-play"></i></button>
+        <button id="nextBtn" class="control-btn"><i class="bi bi-skip-forward"></i></button>
+      </div>
+      <!-- song-info-container = styles for tooltip with song information when user hovers over audio controls -->
+      <div class="song-info-container text-light text-center">
+        <div class="song-info">
+          <div id="song"></div>
+          <div id="artist" class="opacity-50"></div>
+        </div>
+        <!-- Volume slider -->
+        <div class="d-flex flex-row gap-1">
+          <i class="bi bi-volume-up"></i>
+          <input type="range" id="volumeSlider" class="slider" min="0" max="100" step="1" value="100">
+        </div>
+      </div>
+    </div>
+    <button id="changeThemeBtn">Theme: Lofi</button>
+    <script src="js/audioPlayer.js"></script>
+
+  </body>
+</html>

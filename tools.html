@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPA Squared</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav
+      id="navbar"
+      class="tools-navbar navbar-color navbar fixed-top navbar-expand-lg navbar-dark nb-background-color"
+    >
+      <!-- lg = large breakpoint, nb-background-color = purple background color -->
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img
+            src="img/gpa_saver.svg"
+            alt="GPA Saver Squared Logo"
+            class="d-inline-block w-75"
+          />
+        </a>
+
+        <!-- Hamburger Menu Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+        <div class="collapse navbar-collapse" id="navmenu">
+          <!-- Links to hamburger menu button -->
+          <ul class="navbar-nav ms-auto align-items-center">
+            <!-- ms-auto is margin spacing-->
+            <li class="nav-item">
+              <a href="tools.html" class="nav-link nbMenuItem">Tools</a>
+            </li>
+            <li class="nav-item">
+              <a href="sounds.html" class="nav-link nbMenuItem">Sounds</a>
+            </li>
+            <li class="nav-item">
+              <a href="login.html" class="nav-link nbMenuItem">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="signup.html" class="nav-btn nbMenuItem">
+                <!-- nav-btn = custom class for margin -->
+                <button class="btn btn-light rounded-pill py-1">Sign Up</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- tools = custom class to get rid of top padding -->
+    <main class="tools">
+      <section class="tools-hero">
+        <div class="container text-light">
+          <h1 class="fs-1 fw-bold">Tools</h1>
+          <p class="fs-3 text-gray">Unlock the full potential of your study guides with our cutting-edge tools.</p>
+        </div>
+      </section>
+      <!-- tools = custom class for the tools section -->
+      <section class="tools">
+        <div class="container">
+          <h2 class="fw-bold mb-4">Organization and Theming</h2>
+          <!-- tools-grid = using grid and media queries to create responsive layout for cards -->
+          <div class="tools-grid gap-3">
+            <div class="card">
+              <img src="img/formatting.png" class="card-img-top" alt="Graphic of text being rearranged">
+              <div class="card-body">
+                <h5 class="card-title">Streamlined Formatting</h5>
+                <p class="card-text">Effortlessly reformat and restyle your notes with the help of AI.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/visuals.png" class="card-img-top" alt="Graphic of text being turned into tree diagrams and tables">
+              <div class="card-body">
+                <h5 class="card-title">Automatic Visuals</h5>
+                <p class="card-text">Sort information into tables and diagrams with the click of a button.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/themes.png" class="card-img-top" alt="Graphic of study guide with biology, cell, DNA theming">
+              <div class="card-body">
+                <h5 class="card-title">Customizable Themes</h5>
+                <p class="card-text">Beautify your study guides with stunning visuals and backdrops generated to match the content.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/dynamic.png" class="card-img-top" alt="Graphic of planets coming out of study guide page">
+              <div class="card-body">
+                <h5 class="card-title">Dynamic Components</h5>
+                <p class="card-text">Bring your study guides to life with interactive components that pop out of the page.</p>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="fw-bold mb-4">Content Helper</h2>
+          <div class="tools-grid gap-3">
+            <div class="card">
+              <img src="img/checking.png" class="card-img-top" alt="Graphic of chemical formula being corrected">
+              <div class="card-body">
+                <h5 class="card-title">Advanced Fact-Checking</h5>
+                <p class="card-text">Catch all sorts of typos and correct inaccurate information.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/summarize.png" class="card-img-top" alt="Graphic of highlighted portions of text being turned into summary">
+              <div class="card-body">
+                <h5 class="card-title">Paraphrase and Summarize</h5>
+                <p class="card-text">Automatically reword text for maximum clarity and concision.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/weakpoints.png" class="card-img-top" alt="Graphic of magnifying glass over study guide">
+              <div class="card-body">
+                <h5 class="card-title">Highlight Weak Points</h5>
+                <p class="card-text">Keep track of confusing concepts so you can effectively focus your studying.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/resources.png" class="card-img-top" alt="Graphic of pop-up with list of links from section of text">
+              <div class="card-body">
+                <h5 class="card-title">Resource Finder</h5>
+                <p class="card-text">Select any section of text to access further reading on the topic.</p>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="fw-bold mb-4">Interactive Practice</h2>
+          <div class="tools-grid gap-3">
+            <div class="card">
+              <img src="img/flashcards.png" class="card-img-top" alt="Graphic of various multicolored flashcards">
+              <div class="card-body">
+                <h5 class="card-title">Generate Flashcards</h5>
+                <p class="card-text">Memorize your notes however you see fit with customizable flashcards.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/quiz.png" class="card-img-top" alt="Graphic of multiple choice question and question mark symbol">
+              <div class="card-body">
+                <h5 class="card-title">Quiz Yourself</h5>
+                <p class="card-text">Generate high-level practice questions from your notes of any format and difficulty.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/smart-grading.png" class="card-img-top" alt="Graphic of comment pop-ups from a graded written response">
+              <div class="card-body">
+                <h5 class="card-title">Smart Grading</h5>
+                <p class="card-text">Receive personalized feedback on your responses to open-ended practice questions.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/games.png" class="card-img-top" alt="Graphic of players around a book in the game library">
+              <div class="card-body">
+                <h5 class="card-title">Game Library</h5>
+                <p class="card-text">Enliven your studying by playing alone or with friends from our subject-tailored game library.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row pt-5 pb-3 justify-content-between">
+          <!-- w-max-content = custom class to set width to max-content -->
+          <div class="w-max-content mx-auto mx-md-0 mb-3 mb-md-0">
+            <img
+              src="img/gpa_saver.svg"
+              alt="GPA Saver Squared Logo"
+              class="logo"
+            />
+          </div>
+          <div class="w-max-content d-flex justify-content-end align-items-center mx-auto mx-md-0">
+            <ul class="list-inline my-0">
+              <li class="list-inline-item"><a href="index.html">Home</a></li>
+              <li class="list-inline-item"><a href="tools.html">Tools</a></li>
+              <li class="list-inline-item"><a href="sounds.html">Sounds</a></li>
+              <li class="list-inline-item"><a href="login.html">Login</a></li>
+              <li class="list-inline-item"><a href="signup.html">Sign Up</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="w-max-content text-light opacity-50 mb-0 pb-5 mx-auto mx-md-0">Copyright © 2023 GPA Saver </p>
+      </div>
+    </footer>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>

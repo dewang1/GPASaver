@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap');
+/* Declare variables (for colors) */
+:root {
+  --bg-hero: #0F0039; /* Landing page hero background color */
+  --bg-nav: var(--bg-hero); /* Navigation bar background color*/
+  --bg-val-prop: #c5b5ef; /* Background color for value proposition section in landing page */
+  --bg-pricing: #19005a; /* Background color for pricing section in landing page */
+  --bg-tools: #d8cef5;
+  
+  --button: #7a20bf;        /* Button bg color */
+  --button-hover: #9938e3;  /* Button bg hover color */
+
+  --navbar-height: 58.4px; /* Height of navbar (used for padding calculations) */
+}
+
+/* Reset types */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set default font-family */
+body {
+  font-family: "DM Sans", sans-serif !important;
+  overflow-x: hidden;
+}
+
+/* Main content for page */
+main {
+  background-color: var(--bg-tools);
+  padding: calc(5rem + var(--navbar-height)) 0 5rem;
+}
+
+/* ----------------------- Navigation bar ----------------------- */
+
+/* Navbar and footer background color */
+.nb-background-color, footer {
+  background-color: var(--bg-nav);
+}
+
+/* Font size and spacing for navigation links */
+.nbMenuItem {
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+/* Margin for buttons in nav bar */
+.nav-btn {
+  margin-left: 20px;
+}
+
+/* Sign up button */
+.signup {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 18px;
+}
+
+/* ----------------------- Landing page ----------------------- */
+
+/* Hero section in the landing page */
+.landing-hero {
+  background-color: var(--bg-hero);
+  padding: 9rem 0;
+  background-image: url("../img/mountain-mobile.png");
+  background-size: 100%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 570px) {
+  .landing-hero {
+    background-image: url("../img/mountain-mobile.png");
+    background-size: 85%;
+  }
+
+  #cloud {
+    width: 50%;   
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .landing-hero {
+    background-image: url("../img/mountain.png");
+    background-size: 70%;
+  }
+
+  #cloud {
+    width: 30%;   
+  }
+}
+
+/* Clouds graphic */
+#cloud {
+  --left: -100%; /* Starting position of the clouds */
+  left: var(--left);
+  position: absolute;
+  bottom: 15%;
+  width: 500px;
+  pointer-events: none;
+  user-select: none;
+  animation: cloud-animation 20s linear infinite;
+}
+
+@media only screen and (min-width: 576px) {
+  #cloud {
+    --left: 10%;
+  }
+}
+
+/* Animates clouds to move and fade in/out across the page */
+@keyframes cloud-animation {
+  0% {
+    left: var(--left);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+/* Text gradient and font size */
+.landing-hero h1 {
+  font-size: calc(2.2rem + 1vw);
+  background: linear-gradient(121deg, #FA00FF 0%, #FFCB00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Value proposition section */
+.val-prop {
+  background: var(--bg-val-prop);
+  padding: 100px 0;
+}
+
+.val-prop h1 {
+  max-width: 640px;
+}
+
+.img-50 {
+  max-width: 50%;
+}
+
+#sounds-section {
+  background-image: url("../img/water-effect.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Highlight image */
+#supercharge {
+  position: relative;
+  margin: 80px 0 40px;
+  z-index: 1;
+}
+
+#supercharge::before {
+  filter: hue-rotate(170deg);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/yellow-highlight.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 150%; 
+  height: 400%;
+  z-index: -1;
+}
+
+/* Pricing section */
+.pricing {
+  background-color: var(--bg-pricing);
+  padding: 4rem 0;
+}
+
+.pricing-grid {
+  display: grid;
+  max-width: 800px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 576px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pricing-grid > * {
+  padding: 2rem 2.5rem;
+}
+
+/* Basic Plan border */
+.basic-plan {
+  border-radius: 20px;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  transition: border 250ms ease;
+}
+
+/* Basic Plan button */
+.basic-plan .btn {
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+}
+
+.basic-plan .btn:hover {
+  border: 2px rgba(255, 255, 255, 0.8) solid;
+}
+
+/* Pro Plan border */
+.pro-plan {
+  border: solid 3px transparent;
+  border-radius: 20px;
+  background: linear-gradient(var(--bg-pricing), var(--bg-pricing)) padding-box,
+              linear-gradient(120deg, #FA00FF 0%, #FFCB00 100%) border-box;
+}
+
+/* Pro plan button */
+.pro-plan .btn {
+  background: linear-gradient(120deg, #FA00FF 0%, #FFCB00 100%);
+  border: none;
+}
+
+
+/* ----------------------- Sounds page ----------------------- */
+/* Canvas for audio visualizer */
+#visualizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar has a black to transparent gradient */
+.navbar-gradient {
+  background: linear-gradient(to bottom, #0000009c 0%, #00000089 40%, transparent);
+}
+
+/* Background image of sounds page */
+.sounds-bg {
+  background-image: url('../img/background/lofi_anime.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+
+/* Link for image credit */
+.image-credit {
+  position: fixed;
+  bottom: 15px;
+  left: 90px;
+  font-size: 12px;
+  color: #ffffff8e; /* Change this to the desired text color */
+  text-decoration: none;
+  transition: color 200ms ease-out;
+}
+
+.image-credit:hover {
+  color: #ffffffff;
+}
+
+/* Container for the controls */
+.audio-player-container {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bg-nav);
+  padding: 6px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons in controls */
+.control-btn {
+  background-color: var(--button);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+  background-color: var(--button-hover);
+}
+
+/* Tooltip for song info */
+.song-info-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0;
+	transform: translateY(0px);
+	transition: opacity 0.3s, transform 0.3s;
+	position: absolute;
+	bottom: 40px;
+	background-color: var(--bg-nav);
+	padding: 8px 12px;
+	border-radius: 8px;
+	width: 120%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+/* Tooltip: Song name */
+#song {
+  font-size: 14px;
+}
+
+/* Tooltip: Song artist */
+#artist {
+  font-size: 12px;
+}
+
+/* Volume slider in tooltip */
+.slider {
+  width: 100%;
+  background-color: transparent;
+  accent-color: var(--bg-val-prop);
+}
+
+/* When the controls are hovered, the tooltip will show */
+.audio-player-container:hover .song-info-container {
+  opacity: 1;
+  transform: translateY(-14px);
+}
+
+/* Change theme button */
+#changeThemeBtn {
+  position: fixed;
+  bottom: 15px;
+  right: 50px;
+  background-color: var(--button);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+#changeThemeBtn:hover {
+  background-color: var(--button-hover);
+}
+
+/* ----------------------- Footer ----------------------- */
+/* Set width for logo */
+.logo {
+  width: 147.75px;
+}
+
+.w-max-content {
+  width: max-content;
+}
+
+/* Footer links */
+footer li a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: color 250ms ease-out;
+}
+footer li a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+footer li + li {
+  margin-left: 1rem;
+}
+
+/* ----------------------- Tools page -----------------------*/
+/* Make navbar initially transparent (will change when user scrolls) */
+.tools-navbar {
+  background-color: transparent;
+  transition: background-color 250ms ease-out;
+}
+
+/* Light purple background */
+main.tools {
+  padding-top: 0;
+}
+
+/* Hero text and image */
+.tools-hero {
+  padding: 6rem 0 10rem;
+  background-image: url("../img/tools.png");
+  background-size: cover;
+  background-position: 75% center;
+  background-repeat: no-repeat;
+  padding-top: 200px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Description underneath tools title */
+.tools-hero p {
+  max-width: 480px;
+}
+
+/* Black gradient to create contrast between text and image */
+.tools-hero::after {
+  content: '';
+  position: absolute;
+  display: block;
+  inset: 0;
+  background: linear-gradient(to right, #0000009c, #0000009c);
+  z-index: -1;
+}
+
+@media only screen and (min-width: 1200px) {
+  .tools-hero::after {
+    background: linear-gradient(to right, #0000009c 0%, #00000089 20%, transparent 60%, transparent 100%);
+  }
+}
+
+/* Margins for main headings above tool feature cards */
+section.tools h2 {
+  margin-top: 4rem;
+}
+
+/* Tool feature cards */
+.tools-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 576px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .tools-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.tools-grid .card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+}
+
+.tools-grid .card .card-body {
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.tools-grid .card img {
+	max-width: 200px;
+	margin: 0 auto;
+}
+
+/* ----------------------- Sign up and login page ----------------------- */
+/* Page radial gradient */
+main.login {
+  background-image: radial-gradient(circle at 10% 20%, #d0a8f1, transparent 70%),
+                    radial-gradient(circle at 90% 80%, #88d5ff, transparent 70%);
+}
+
+/* Card that contains form inputs */
+.login-card {
+  background-color: #ffffff81;
+  border: 1px #d2d2d2 solid;
+  max-width: 450px;
+  border-radius: 1.5rem;
+}
+
+.login-card form p {
+  color: #00000085;
+  font-size: 0.85rem;
+}
+
+/* ----------------------- Adding to Bootstrap styles ----------------------- */
+.container {
+  padding: 0 1rem;
+}
+
+.mt-6 {
+  margin-top: 6rem;
+}
+
+.text-gray {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ghost-btn {
+  padding: 0.375rem 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ghost-btn:hover, .ghost-btn:active, .ghost-btn:focus {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+a {
+  text-decoration: none;
+}

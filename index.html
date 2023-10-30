@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPA Squared</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar-color navbar fixed-top navbar-expand-lg navbar-dark nb-background-color"
+    >
+      <!-- lg = large breakpoint, nb-background-color = purple background color -->
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <img
+            src="img/gpa_saver.svg"
+            alt="GPA Saver Squared Logo"
+            class="d-inline-block w-75"
+          />
+        </a>
+
+        <!-- Hamburger Menu Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+        <div class="collapse navbar-collapse" id="navmenu">
+          <!-- Links to hamburger menu button -->
+          <ul class="navbar-nav ms-auto align-items-center">
+            <!-- ms-auto is margin spacing-->
+            <li class="nav-item">
+              <a href="tools.html" class="nav-link nbMenuItem">Tools</a>
+            </li>
+            <li class="nav-item">
+              <a href="sounds.html" class="nav-link nbMenuItem">Sounds</a>
+            </li>
+            <li class="nav-item">
+              <a href="login.html" class="nav-link nbMenuItem">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="signup.html" class="nav-btn nbMenuItem">
+                <!-- nav-btn = custom class for margin -->
+                <button class="btn btn-light rounded-pill py-1">Sign Up</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="landing-hero position-relative">
+      <!-- landing-hero = custom class for background and padding -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-lg-6 col-xl-5 text-light">
+            <h1 class="mb-4 fw-bold">Redefining the way you learn and study.</h1>
+            <p class="fs-5 mb-4 text-gray">
+              We provide a whole catalog of tools and resources to help you study for the next big exam. 
+            </p>
+            <div class="d-flex">
+              <a href="signup.html"  class="btn btn-light rounded-pill px-3 me-2">Sign Up</a>
+              <a href="#val-prop" class="btn ghost-btn rounded-pill px-3">Learn more</a>
+              <!-- ghost-btn = custom class for button w/ transparent background -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #cloud = used for absolute positioning and animation of clouds -->
+      <img draggable="false" id="cloud" src="img/cloud.png"/>
+    </section>
+  
+    <!-- val-prop = custom class to target elements inside value proposition section -->
+    <section id="val-prop" class="val-prop">
+      <div class="container">
+        <!-- Tools Section -->
+        <h1 id="supercharge" class="text-center mx-auto fw-bold">
+          Supercharge <i class="bi bi-lightning-charge"></i> your study guides with our cutting-edge tools.
+        </h1>
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 p-4">
+            <img
+              class="d-block img-50 mx-auto"
+              src="img/organization.png"
+              alt="Graphic of papers in a drawer"
+            />  
+            <h4 class="text-center fw-bold">Organization and Theming</h4>
+            <p class="text-center">
+              With our AI organization tools, you'll never waste time again trying to sift through messy notes. Make your studying efficient and engaging with clean and aesthetic study guides.
+            </p>
+          </div>
+          <div class="col-sm-6 col-lg-4 p-4">
+            <img
+              class="d-block img-50 mx-auto"
+              src="img/content.png"
+              alt="Graphic of check mark and connected text bubbles"
+            />
+            <h4 class="text-center fw-bold">Content Helper</h4>
+            <p class="text-center">
+              Not understanding something? Our AI content helper guides you as you study, allowing you to hone in on important details or zoom out to the big picture.
+            </p>
+          </div>
+          <div class="col-sm-6 col-lg-4 p-4">
+            <img
+              class="d-block img-50 mx-auto"
+              src="img/practice.png"
+              alt="Graphic of apple and pencil writing on cards"
+            />
+            <h4 class="text-center fw-bold">Interactive Practice</h4>
+            <p class="text-center">
+              Our AI practice tools make sure you feel confident in your knowledge with an endless variety of ways to review what you've been studying.
+            </p>
+          </div>
+          <div
+            class="col-sm-6 col-lg-12 d-flex justify-content-center align-items-center"
+          >
+            <a href="tools.html"><button class="btn btn-dark rounded-pill px-3">See more</button></a>
+          </div>
+        </div>
+
+        <!-- Sounds section -->
+        <!-- mt-6 = custom class for larger margin than mt-5  -->
+        <!-- sounds-section = id used for water background -->
+        <div id="sounds-section" class="row mt-6">
+          <div
+            class="col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-start e-5 mb-4 mb-md-0 text-center text-md-start"
+          >
+            <h1 class="fw-bold">Stress less, vibe <i class="bi bi-headphones"></i> more.</h1>
+            <p>
+              Our AI-powered soundscapes help you focus when studying environments are less than perfect. From cozy coffee shops to calming rainstorms, explore our diverse catalog to find the sounds that suit you.
+            </p>
+            <a href="sounds.html" class="btn btn-dark rounded-pill px-3">
+              Try Sample Sounds
+            </a>
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/sounds-lofi.png" class="d-block w-100 rounded-4" alt="GPA Sounds Page (lofi)">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/sounds-classical.png" class="d-block w-100 rounded-4" alt="GPA Sounds Page (classical)">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/sounds-nature.png" class="d-block w-100 rounded-4" alt="GPA Sounds Page (nature)">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/sounds-fireplace.png" class="d-block w-100 rounded-4" alt="GPA Sounds Page (fireplace)">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/sounds-rainstorm.png" class="d-block w-100 rounded-4" alt="GPA Sounds Page (rainstorm)">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/sounds-coffee.png" class="d-block w-100 rounded-4" alt="GPA Sounds Page (coffee shop)">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-6 col-lg-6 p-4">
+              <h4 class="text-center fw-bold">Customizable Soundscapes</h4>
+              <p class="text-center">
+                Choose from our wide selection of high-quality soundscape presets and modify them however you like.
+                Want to add a warm fireplace to your library ambience? Sure can. How about making it a bit more fantasy? Easy. The possibilities are endless.
+              </p>
+            </div>
+            <div class="col-sm-6 col-lg-6 p-4">
+              <h4 class="text-center fw-bold">Adaptive Listening</h4>
+              <p class="text-center">
+                Turn on adaptive listening and hear your custom soundscape adapt to your current studying circumstances.
+                Seamlessly transition from one environment to the next as you switch subjects, or maybe ratchet up the intensity for a burst of much-needed concentration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing py-5 text-light">
+      <div class="container">
+        <p class="opacity-50 text-center mt-5 mb-0">Pricing</p>
+        <h1 class="text-center mb-5">Pay as you go</h1>
+        <div class="pricing-grid gap-4 mb-5">
+        <!-- basic-plan = white border -->
+        <div class="basic-plan d-flex flex-column justify-content-between">
+          <div>
+            <h4 class="opacity-75">Basic Plan</h4>
+            <h1>Free</h1>
+            <ul>
+              <li>Access to free tools</li>
+              <li>Enjoy the default playlists</li>
+            </ul>
+            </div>
+            <a href="signup.html" class="btn ghost-btn rounded-pill px-3 d-block">Get started for free</a>
+        </div>
+        <!-- pro-plan = gradient border -->
+        <div class="pro-plan d-flex flex-column justify-content-between">
+          <div>
+            <h4 class="opacity-75">Pro Plan</h4>
+            <h1>$1000 <span class="fs-5 opacity-50">/month</span></h1>
+            <p class="mb-0 opacity-50">Everthing in basic plan and:</p>
+            <ul>
+              <li>Access to whole catalog of tools</li>
+              <li>Create custom playlists</li>
+              <li>Talk to the founders of GPA Saver<sup>2</sup></li>
+            </ul>
+          </div>
+          <a href="signup.html" class="btn btn-dark rounded-pill px-3">Become a pro</a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row pt-5 pb-3 justify-content-between">
+          <!-- w-max-content = custom class to set width to max-content -->
+          <div class="w-max-content mx-auto mx-md-0 mb-3 mb-md-0">
+            <img
+              src="img/gpa_saver.svg"
+              alt="GPA Saver Squared Logo"
+              class="logo"
+            />
+            <!-- logo = custom class for width of the logo -->
+          </div>
+          <div class="w-max-content d-flex justify-content-end align-items-center mx-auto mx-md-0">
+            <ul class="list-inline my-0">
+              <li class="list-inline-item"><a href="#">Home</a></li>
+              <li class="list-inline-item"><a href="tools.html">Tools</a></li>
+              <li class="list-inline-item"><a href="sounds.html">Sounds</a></li>
+              <li class="list-inline-item"><a href="login.html">Login</a></li>
+              <li class="list-inline-item"><a href="signup.html">Sign Up</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="w-max-content text-light opacity-50 mb-0 pb-5 mx-auto mx-md-0">Copyright © 2023 GPA Saver </p>
+      </div>
+    </footer>
+  </body>
+</html>
